@@ -1,0 +1,2 @@
+ntpserver: pool.ntp.org
+ansible_user: ec2-user

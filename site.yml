@@ -1,0 +1,15 @@
+---
+#This playbook deploys all the on premise settings
+- name: Deploy Common Settings
+  hosts: all
+  roles:
+    - role: common
+
+# - name: Deploy DNS Servers Settings
+#   import_playbook: dnsservers.yml
+- name: Deploy Docker Servers Settings
+  import_playbook: dockerservers.yml
+
+- name: Deploy Pi Monitoring
+  import_playbook: pi.yml
+

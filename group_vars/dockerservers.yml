@@ -1,0 +1,10 @@
+system_user: ec2-user
+aws_efs_paths:
+- path: "/efs"
+  owner: "root"
+  group: "root"
+  mode: "0655"
+  region: "af-south-1"
+  filesystem_id: fs-93719036
+  state: "mounted"
+  opts: "nfsvers=4.1"

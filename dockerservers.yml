@@ -1,0 +1,7 @@
+---
+    - hosts: dockerservers
+      roles:
+        - python
+        - role: thiagoalmeidasa.aws_efs
+          become: yes
+        - dockerservers

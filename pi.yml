@@ -1,0 +1,5 @@
+---
+    - hosts: pimonitoring
+      roles:
+        - role: pi
+          become: yes

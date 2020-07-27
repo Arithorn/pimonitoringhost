@@ -1,0 +1,15 @@
+---
+- name: be sure python3 is installed
+  package:
+    name: python3
+    state: present
+  tags: python
+  become: yes
+
+- name: be sure pip3 is installed
+  package:
+    name: python3-pip
+    state: present
+  tags: python
+  become: yes
+

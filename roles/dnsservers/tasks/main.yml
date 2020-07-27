@@ -1,0 +1,15 @@
+---
+    - name: be sure dnsmasq is installed
+      package:
+        name: dnsmasq
+        state: present
+      tags: dnsmasq
+      become: yes
+
+    - name: be sure dnsmasq is running and enabled
+      service:
+        name: dnsmasq
+        state: started
+        enabled: yes
+      tags: dnsmasq
+      become: yes

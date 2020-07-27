@@ -1,0 +1,20 @@
+---
+- hosts: wordpress
+  tasks:
+  - name: Run docker-compose up
+    command: docker-compose -f docker-compose.yml up -d
+    args:
+      chdir: "{{ compose_project_dir }}"
+  
+#   - name: Get DB Password
+#     command: aws secretsmanager get-secret-value --region af-south-1 --output=json --secret-id wp_db_psw
+#     register: wp_db_psw_out
+
+#   - debug:
+#       msg:
+#       - "WORDPRESS_DB_PASSWORD: {{ wp_db_psw_out }}"
+
+#   - debug:
+#       msg:
+#       - "WORDPRESS_DB_PASSWORD: {{ (wp_db_psw_out.stdout|from_json).SecretString }}"
+  

@@ -1,0 +1,36 @@
+---
+    - name: be sure jq is installed
+      package:
+        name: jq
+        state: present
+      tags: system
+      become: yes
+
+    - name: be sure docker is installed
+      package:
+        name: docker
+        state: present
+      tags: docker
+      become: yes
+
+    - name: be sure docker is running and enabled
+      service:
+        name: docker
+        state: started
+        enabled: yes
+      tags: docker
+      become: yes
+
+    - name: ensure docker-compose is installed
+      pip:
+        name:
+            - docker-compose
+        executable: pip3
+      become: yes
+      
+    - name: Add users to the Docker group
+      user:
+        name: "{{ system_user }}"
+        groups: docker
+        append: yes
+      become: yes
