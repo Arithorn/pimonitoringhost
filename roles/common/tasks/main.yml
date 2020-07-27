@@ -23,7 +23,7 @@
 
 - name: be sure ntp is running and enabled
   service:
-    name: ntp
+    name: ntpd
     state: started
     enabled: yes
   tags: ntp
