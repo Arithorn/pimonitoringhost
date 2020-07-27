@@ -7,9 +7,9 @@
 
 - name: be sure ntp is installed
   package:
-    name: ntp
+    name: ntpd
     state: present
-  tags: ntp
+  tags: ntpd
   become: yes
 
 - name: be sure ntp is configured
@@ -18,7 +18,7 @@
     dest: /etc/ntp.conf
   notify:
     - restart ntpd
-  tags: ntp
+  tags: ntpd
   become: yes
 
 - name: be sure ntp is running and enabled
@@ -26,5 +26,5 @@
     name: ntpd
     state: started
     enabled: yes
-  tags: ntp
+  tags: ntpd
   become: yes

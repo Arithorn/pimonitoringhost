@@ -1,4 +1,4 @@
 [dockerservers]
-localhost
+localhost ansible_connection=local
 [pimonitoring]
-localhost
+localhost ansible_connection=local
