@@ -33,5 +33,5 @@
   register: efsid
 
 - debug:
-  var: efsid
-  verbosity: 2
+    var: efsid
+    verbosity: 2
