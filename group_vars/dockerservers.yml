@@ -5,6 +5,6 @@ aws_efs_paths:
   group: "root"
   mode: "0655"
   region: "af-south-1"
-  filesystem_id: {{efsid}}
+  filesystem_id: "{{efsid}}"
   state: "mounted"
   opts: "nfsvers=4.1"
