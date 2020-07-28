@@ -1,6 +1,6 @@
 ---
 - name: upgrade all packages
-  yum:
+  dnf:
     name: '*'
     state: latest
   become: yes
