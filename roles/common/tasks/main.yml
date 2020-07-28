@@ -29,9 +29,9 @@
   tags: ntp
   become: yes
 
-# - name: Get EFS ID
-#   command: aws secretsmanager get-secret-value --region af-south-1 --output json --secret-id efsid
-#   register: efsid
+- name: Get EFS ID
+  command: aws secretsmanager get-secret-value --region af-south-1 --output json --secret-id efsid
+  register: efsid
 
 
 
